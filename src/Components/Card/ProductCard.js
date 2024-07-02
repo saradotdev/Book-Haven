@@ -48,7 +48,6 @@ export default function ProductCard({ productdetails })
     {
         if(wishlistHeartIcon==="fa-heart-o" && wishlistBtn ==="add-to-wishlist-btn")
         {
-            //Item not present in wishlist, add it
             const token=localStorage.getItem('token')
 
             if(token)
