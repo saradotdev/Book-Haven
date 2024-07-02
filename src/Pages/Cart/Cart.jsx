@@ -79,7 +79,7 @@ function Cart()
                                 isStopped={false}
                                 isPaused={false}
                             />
-                            <h2>Your cart is empty 🙃</h2>
+                            <h2>Your cart is empty</h2>
                             <Link to="/shop">
                                 <button className=" solid-primary-btn">Go to shop</button>
                             </Link>
