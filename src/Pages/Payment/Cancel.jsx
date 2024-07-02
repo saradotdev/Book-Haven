@@ -1,4 +1,4 @@
-import "./Orders.css"
+import React from 'react';
 import { useEffect } from "react";
 import jwt_decode from "jwt-decode"
 import axios from "axios";
@@ -10,17 +10,17 @@ import {
     useOrders
 } from "../../index"
 import Lottie from 'react-lottie';
-import GuyWithBookLottie from "../../Assets/Icons/guy_with_book.json"
+import CancelLottie from "../../Assets/Icons/cancel.json"
 
-function Orders()
-{
+
+function Cancel() {
     const { userWishlist, dispatchUserWishlist } = useWishlist()
     const { userCart, dispatchUserCart } = useCart()
     const { userOrders, dispatchUserOrders } = useOrders()
-    let guyWithBookObj = {
+    let cancelObj = {
         loop: true,
         autoplay: true,
-        animationData : GuyWithBookLottie,
+        animationData : CancelLottie,
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice'
         }
@@ -79,36 +79,24 @@ function Orders()
     },[])
 
     return (
-        <div className="orders-content-container">
-            <h2>{userOrders.length} {userOrders===1?"item":"items"} in your Orders</h2>
-            {
-                userOrders.length === 0
-                ? (
-                    <div className="no-orders-message-container">
-                            <Lottie options={guyWithBookObj}
-                                height={350}
-                                width={350}
-                                isStopped={false}
-                                isPaused={false}
-                            />
-                            <h2>You have not placed any orders</h2>
-                            <Link to="/cart">
-                                <button className=" solid-primary-btn">Go to cart</button>
-                            </Link>
-                    </div>
-                )
-                : (
-                    <div className="orders-container">
-                        {
-                            userOrders.map( (productDetails, index)=>    
-                                <ProductOrderCard key={index} productDetails={productDetails}/>
-                            )
-                        }
-                    </div>
-                )
-            }
+        <div className="cart-content-container">
+            <h2>Payment Cancelled</h2>
+            
+            <div className="empty-cart-message-container">
+                    <Lottie options={cancelObj}
+                        height={200}
+                        width={200}
+                        isStopped={false}
+                        isPaused={false}
+                    />
+                    <h2>Your payment was not completed</h2>
+                    <Link to="/shop">
+                        <button className=" solid-primary-btn">Go to shop</button>
+                    </Link>
+            </div>
+
         </div>
-    )
+    );
 }
 
-export { Orders }
+export { Cancel };

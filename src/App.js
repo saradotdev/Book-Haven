@@ -12,7 +12,8 @@ import {
   Signup,
   Wishlist,
   Cart,
-  Orders,
+  Success,
+  Cancel,
   useUserLogin,
   useWishlist,
   useCart
@@ -37,7 +38,8 @@ function App() {
           <Route path="/signup"         element={<Signup/>} />
           <Route path="/wishlist"       element={<Wishlist/>} />
           <Route path="/cart"           element={<Cart/>} />
-          <Route path="/orders"         element={<Orders/>} />
+          <Route path="/success"         element={<Success/>} />
+          <Route path="/cancel"         element={<Cancel/>} />
         </Routes>
         <Toast position="bottom-right"/>
       </div>

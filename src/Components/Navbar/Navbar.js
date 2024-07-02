@@ -127,21 +127,6 @@ function Navbar() {
                         </div>
                     </button>
                 </Link>
-                <Link to="/orders">
-                    <button className="icon-btn">
-                        <div className="icon-count-badge">
-                        <BsFillBagFill 
-                            style={{
-                                marginBottom:"4px"
-                            }}
-                        />
-                        {
-                            userOrders.length!==0
-                            && (<span className="count-badge-x">{userOrders.length}</span>)
-                        }
-                        </div>
-                    </button>
-                </Link>
             </div>
         </div>
     )

@@ -41,7 +41,8 @@ export { ProductPage } from "./Pages/ProductPage/ProductPage"
 export { Shop } from "./Pages/Shop/Shop"
 export { Wishlist } from "./Pages/Wishlist/Wishlist"
 export { Cart } from "./Pages/Cart/Cart"
-export { Orders } from "./Pages/Orders/Orders"
+export { Success } from "./Pages/Payment/Success"
+export { Cancel } from "./Pages/Payment/Cancel"
 
 ReactDOM.render(
   <React.StrictMode>
