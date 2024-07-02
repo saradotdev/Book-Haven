@@ -37,7 +37,7 @@ function Navbar() {
         function handleInvalidToken() {
             if(localStorage.getItem('token')!==null)
             {
-                setUserLoggedIn(true)
+                setUserLoggedIn(true) // User stays logged in
             }
             else
             {
